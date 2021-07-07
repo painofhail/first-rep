@@ -2,6 +2,8 @@
 
 #Hello, World!
 
+[Link](https://painofhail.github.io/first-rep/) to the rep page.
+
 Ny plans for this rep:
 
 - [x] .editorconfig-file for rep
