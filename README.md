@@ -2,7 +2,7 @@
 
 [Link](https://painofhail.github.io/first-rep/) to the rep page.
 
-Ny plans for this rep:
+My plans for this rep:
 
 - [x] .editorconfig-file for rep
 - [x] change git user to painofhail (git config --local)
