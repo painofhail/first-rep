@@ -1,6 +1,4 @@
-# first-rep
-
-#Hello, World!
+# Hello, World! This is my first rep!
 
 [Link](https://painofhail.github.io/first-rep/) to the rep page.
 
