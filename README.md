@@ -4,9 +4,10 @@
 
 My plans for this rep:
 
-- [x] .editorconfig-file for rep
+- [x] create .editorconfig-file for rep
 - [x] change git user to painofhail (git config --local)
-- [x] HTML + CSS page on GitHub Pages
-- [ ] add some js-code
-- [ ] use package from npm
-- [ ] gulp or webpack
+- [x] add HTML + CSS page on GitHub Pages
+- [x] add some js-code
+- [x] install npm
+- [x] install gulp and make a configuration
+- [ ] make any small project

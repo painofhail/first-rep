@@ -1,0 +1,29 @@
+{
+  "name": "first-rep",
+  "version": "1.0.0",
+  "description": "[Link](https://painofhail.github.io/first-rep/) to the rep page.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/painofhail/first-rep.git"
+  },
+  "author": "painofhail",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/painofhail/first-rep/issues"
+  },
+  "homepage": "https://github.com/painofhail/first-rep#readme",
+  "devDependencies": {
+    "browser-sync": "^2.27.4",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-uglify-es": "^2.0.0",
+    "sass": "^1.35.2"
+  }
+}
