@@ -9,8 +9,8 @@ const browserSync 	= require('browser-sync').create();
 const del 					= require('del');
 
 // delete dist folder
-function cleanDist() {
-	return del("dist")
+function cleanDist () {
+	return del('dist')
 }
 
 // scss-transform, minify style-files
@@ -27,28 +27,29 @@ function styles () {
 }
 
 // minify js-files
-function scripts() {
-  return src("src/script/main.js")
-		.pipe(concat("main.min.js"))
+function scripts () {
+  return src('src/script/**/*.js')
+		.pipe(concat('main.min.js'))
 		.pipe(uglify())
-    .pipe(dest("dist/script/"))
+    .pipe(dest('dist/script/'))
 		.pipe(browserSync.stream())
 }
 
 // pictures optimization
-function images() {
-  return src("src/images/**/*")
+function images () {
+  return src('src/images/**/*')
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
         imagemin.mozjpeg({ quality: 75, progressive: true }),
         imagemin.optipng({ optimizationLevel: 5 }),
         imagemin.svgo({
-          plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+          plugins: [
+						{ cleanupIDs: false }],
         }),
       ])
     )
-    .pipe(dest("dist/images"));
+    .pipe(dest('dist/images'));
 }
 
 // watch for src-files
