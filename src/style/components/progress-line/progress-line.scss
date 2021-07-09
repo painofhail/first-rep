@@ -1,0 +1,19 @@
+$progress-bar-height: 5px;
+$progress-bar-main-color: orange;
+$progress-bar-current-color: orangered;
+
+.progress-bar {
+	position: fixed;
+	height: $progress-bar-height;
+	width: 100%;
+	z-index: 5;
+	background-color: $progress-bar-main-color;
+	box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.404);
+
+	&__current {
+		background-color: $progress-bar-current-color;
+		width: 0;
+		height: 100%;
+		transition: width ease-out 0.3s;
+	}
+}

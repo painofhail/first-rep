@@ -17,11 +17,11 @@ function cleanDist() {
 function styles () {
 	return src(['node_modules/normalize.css/normalize.css', 'src/style/style.scss'])
 		.pipe(concat('style.min.css'))								// files concatinating
+		.pipe(scss({outputStyle: 'compressed'}))			// compressed version
+		// .pipe(scss({ outputStyle: "expanded" }))   // readable version
 		.pipe(autoprefixer({
 			overrideBrowserslist: ['last 10 versions']
 		}))
-		.pipe(scss({outputStyle: 'compressed'}))			// compressed version
-		// .pipe(scss({ outputStyle: "expanded" }))   // readable version
 		.pipe(dest('dist/style/'))
 		.pipe(browserSync.stream())
 }

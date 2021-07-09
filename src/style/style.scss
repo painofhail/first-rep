@@ -1,12 +1,18 @@
+@import 'components/progress-line/progress-line.scss';
+
 body {
-	background-color: rgb(231, 231, 231);
-
-	h1 {
-		color: grey;
-		font-size: 24px;
+	.container {
+		padding: 10px;
+		position: relative;
+		top: $progress-bar-height;
+		z-index: 1;
 	}
+}
 
-	p {
-		color: red;
+.random-text {
+	padding-top: 20px;
+
+	&:first-child{
+		padding-top: 0;
 	}
 }
