@@ -1,5 +1,6 @@
 const { series, parallel, src, dest, watch } = require('gulp');
 
+const htmlmin				= require('gulp-html-minifier');
 const scss 					= require('gulp-sass')(require('sass'));
 const uglify 				= require("gulp-uglify-es").default;
 const concat 				= require('gulp-concat');
@@ -10,7 +11,16 @@ const del 					= require('del');
 
 // delete dist folder
 function cleanDist () {
-	return del('dist')
+	return del(['dist', 'index.html']);
+}
+
+function html () {
+	return src('src/index.html')
+	.pipe(htmlmin({
+		collapseWhitespace: true,
+		removeComments: true
+	}))
+	.pipe(dest('.'))
 }
 
 // scss-transform, minify style-files
@@ -69,7 +79,7 @@ function browsersync () {
 }
 
 // default task
-exports.default = parallel(styles, scripts,	watching,	browsersync);
+exports.default = parallel(html, styles, scripts,	watching,	browsersync);
 
 // build task
-exports.build = series(cleanDist, images, parallel(styles, scripts));
+exports.build = series(cleanDist, images, parallel(html, styles, scripts));
