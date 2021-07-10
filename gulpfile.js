@@ -68,13 +68,8 @@ function browsersync () {
 	})
 }
 
-exports.default = series(
-	cleanDist,
-	images,
-	parallel(
-		styles,
-		scripts,
-		watching,
-		browsersync
-	)
-);
+// default task
+exports.default = parallel(styles, scripts,	watching,	browsersync);
+
+// build task
+exports.build = series(cleanDist, images, parallel(styles, scripts));
