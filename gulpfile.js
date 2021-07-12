@@ -1,6 +1,5 @@
 const { series, parallel, src, dest, watch } = require('gulp');
 
-const htmlmin				= require('gulp-html-minifier');
 const scss 					= require('gulp-sass')(require('sass'));
 const uglify 				= require("gulp-uglify-es").default;
 const concat 				= require('gulp-concat');
@@ -16,11 +15,7 @@ function cleanDist () {
 
 function html () {
 	return src('src/html/**/*.html')
-	.pipe(htmlmin({
-		collapseWhitespace: true,
-		removeComments: true
-	}))
-	.pipe(dest('.'))
+		.pipe(dest('.'))
 }
 
 // scss-transform, minify style-files
@@ -38,29 +33,29 @@ function styles () {
 
 // minify js-files
 function scripts () {
-  return src('src/script/**/*.js')
+	return src('src/script/**/*.js')
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
-    .pipe(dest('dist/script/'))
+		.pipe(dest('dist/script/'))
 		.pipe(browserSync.stream())
-}
+	}
 
 // pictures optimization
 function images () {
-  return src('src/images/**/*')
-    .pipe(
-      imagemin([
-        imagemin.gifsicle({ interlaced: true }),
-        imagemin.mozjpeg({ quality: 75, progressive: true }),
-        imagemin.optipng({ optimizationLevel: 5 }),
-        imagemin.svgo({
-          plugins: [
-						{ cleanupIDs: false }],
-        }),
-      ])
-    )
-    .pipe(dest('dist/images'));
-}
+	return src('src/images/**/*')
+		.pipe(
+			imagemin([
+				imagemin.gifsicle({ interlaced: true }),
+				imagemin.mozjpeg({ quality: 75, progressive: true }),
+				imagemin.optipng({ optimizationLevel: 5 }),
+				imagemin.svgo({
+					plugins: [
+					{ cleanupIDs: false }],
+				}),
+			])
+		)
+		.pipe(dest('dist/images'));
+	}
 
 // watch for src-files
 function watching () {

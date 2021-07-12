@@ -6,7 +6,7 @@
   "scripts": {
     "build": "gulp build",
     "start": "gulp",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "editorconfig-checker --exclude node_modules --exclude .git"
   },
   "repository": {
     "type": "git",
@@ -21,10 +21,10 @@
   "devDependencies": {
     "browser-sync": "^2.27.4",
     "del": "^6.0.0",
+    "editorconfig-checker": "^4.0.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
-    "gulp-html-minifier": "^0.1.8",
     "gulp-imagemin": "^7.1.0",
     "gulp-sass": "^5.0.0",
     "gulp-uglify-es": "^2.0.0",

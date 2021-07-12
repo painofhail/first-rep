@@ -12,16 +12,16 @@ root = true
 	indent_style = tab
 	indent_size = 2
 
-  # delete spaces
+	# delete spaces
 	trim_trailing_whitespace = true
 
-  # default quote
+	# default quote
 	quote_type = single
 
 	# Max line length
 	max_line_length = 120
 
-  # Unix-style newlines with a newline ending every file
+	# Unix-style newlines with a newline ending every file
 	insert_final_newline = true
 	end_of_line = lf
 
@@ -39,3 +39,7 @@ root = true
 [*.md]
 	# do not delete spaces
 	trim_trailing_whitespace = false
+
+# rules for .html
+[*.html]
+	max_line_length = off
