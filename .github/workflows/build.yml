@@ -19,4 +19,4 @@ jobs:
           node-version: ${{ matrix.node-version }}
       # Build
       - run: npm ci
-      - run: npm build
+      - run: npm run build
