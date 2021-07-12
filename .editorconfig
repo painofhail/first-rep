@@ -26,7 +26,7 @@ root = true
 	end_of_line = lf
 
 # rules for .json, .yml
-[*.{json, yml}]
+[*.{json,yml}]
 	indent_style = space
 	indent_size = 2
 
