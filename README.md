@@ -12,4 +12,5 @@ My plans for this rep:
 - [x] install gulp and make a configuration
 - [x] add progress-bar component
 - [x] add switch-theme component
+- [x] add .yml test action for GitHub
 - [ ] make any small project
