@@ -15,7 +15,7 @@ function cleanDist () {
 }
 
 function html () {
-	return src('src/index.html')
+	return src('src/html/**/*.html')
 	.pipe(htmlmin({
 		collapseWhitespace: true,
 		removeComments: true
@@ -64,9 +64,10 @@ function images () {
 
 // watch for src-files
 function watching () {
+	watch('src/html/index.html', html); 									// watch for src index.html
 	watch('src/style/**/*.scss', styles);									// watch for all .scss files
 	watch('src/script/**/*.js', scripts); 								// watch for all .js files
-	watch('index.html').on('change', browserSync.reload)	// watch for index.hnml
+	watch('index.html').on('change', browserSync.reload)	// watch for dist index.html
 }
 
 // update browser page
