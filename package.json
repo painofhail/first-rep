@@ -21,7 +21,6 @@
   "devDependencies": {
     "browser-sync": "^2.27.4",
     "del": "^6.0.0",
-    "editorconfig-checker": "^4.0.2",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
@@ -30,5 +29,8 @@
     "gulp-uglify-es": "^2.0.0",
     "normalize.css": "^8.0.1",
     "sass": "^1.35.2"
+  },
+  "dependencies": {
+    "editorconfig-checker": "^4.0.2"
   }
 }
