@@ -60,6 +60,11 @@ function images () {
 		.pipe(dest('dist/images'));
 }
 
+function plugins () {
+	return src(['src/plugins/**/*.css', 'src/plugins/**/*.js'])
+		.pipe(dest('dist/plugins/'))
+}
+
 // watch for src-files
 function watching () {
 	watch('src/html/index.html', html); 									// watch for src index.html
@@ -88,6 +93,6 @@ exports.default = parallel(html, styles, scripts,	watching,	browsersync);
 // build task
 exports.build = series (
 	cleanDist,
-	parallel(images, fonts),
+	parallel(images, fonts, plugins),
 	parallel(html, styles, scripts)
 );
