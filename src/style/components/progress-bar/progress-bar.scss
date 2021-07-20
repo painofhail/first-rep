@@ -4,7 +4,7 @@
 	width: 100%;
 	z-index: 5;
 	background-color: $progress-bar-main-color;
-	box-shadow: 0px 2px 5px -1px rgba(0, 0, 0, 0.404);
+	box-shadow: 0px 2px 5px -1px #00000067;
 
 	&__current {
 		background-color: $progress-bar-current-color;

@@ -1,0 +1,9 @@
+.custom-modal__inner {
+	position: relative;
+	max-width: 900px;
+	margin: 40px auto;
+
+	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+	border-radius: 10px;
+	background-color: $custom-modal-bg-color;
+}

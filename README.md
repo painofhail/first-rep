@@ -13,5 +13,6 @@ My plans for this rep:
 - [x] add progress-bar component
 - [x] add switch-theme component
 - [x] add .yml test action for GitHub
-- [ ] apply BEM-metodology to project
+- [x] apply BEM-metodology to project
+- [x] add custom-modal component
 - [ ] make any small project

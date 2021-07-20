@@ -1,0 +1,12 @@
+.custom-modal__close {
+	width: 15px;
+	height: 15px;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.7;
+	}
+}
