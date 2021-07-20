@@ -32,5 +32,8 @@
   },
   "dependencies": {
     "editorconfig-checker": "^4.0.2"
-  }
+  },
+  "browserslist": [
+    "last 10 versions"
+  ]
 }

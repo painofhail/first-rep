@@ -24,9 +24,7 @@ function styles () {
 		.pipe(concat('style.min.css'))								// files concatinating
 		.pipe(scss({outputStyle: 'compressed'}))			// compressed version
 		// .pipe(scss({ outputStyle: "expanded" }))   // readable version
-		.pipe(autoprefixer({
-			overrideBrowserslist: ['last 10 versions']
-		}))
+		.pipe(autoprefixer())
 		.pipe(dest('dist/style/'))
 		.pipe(browserSync.stream())
 }
