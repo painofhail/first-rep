@@ -1,5 +1,5 @@
 const { series, parallel, src, dest, watch } = require('gulp');
-
+const htmlmin 			= require('gulp-htmlmin');
 const scss 					= require('gulp-sass')(require('sass'));
 const uglify 				= require("gulp-uglify-es").default;
 const concat 				= require('gulp-concat');
@@ -8,13 +8,14 @@ const imagemin 			= require('gulp-imagemin');
 const browserSync 	= require('browser-sync').create();
 const del 					= require('del');
 
-// delete dist folder
+// delete dist folder and dist index.html
 function cleanDist () {
 	return del(['dist', 'index.html']);
 }
 
 function html () {
 	return src('src/html/**/*.html')
+		.pipe(htmlmin({	collapseWhitespace: true }))
 		.pipe(dest('.'))
 }
 
@@ -26,7 +27,6 @@ function styles () {
 		// .pipe(scss({ outputStyle: "expanded" }))   // readable version
 		.pipe(autoprefixer())
 		.pipe(dest('dist/style/'))
-		.pipe(browserSync.stream())
 }
 
 // minify js-files
@@ -35,7 +35,6 @@ function scripts () {
 		.pipe(concat('main.min.js'))
 		.pipe(uglify())
 		.pipe(dest('dist/script/'))
-		.pipe(browserSync.stream())
 }
 
 // pictures optimization
@@ -65,10 +64,9 @@ function plugins () {
 
 // watch for src-files
 function watching () {
-	watch('src/html/index.html', html); 									// watch for src index.html
-	watch('src/style/**/*.scss', styles);									// watch for all .scss files
-	watch('src/script/**/*.js', scripts); 								// watch for all .js files
-	watch('index.html').on('change', browserSync.reload)	// watch for dist index.html
+	watch('src/html/**/*.html', html).on('change', browserSync.reload); 		// watch for src index.html
+	watch('src/style/**/*.scss', styles).on('change', browserSync.reload);	// watch for all .scss files
+	watch('src/script/**/*.js', scripts).on('change', browserSync.reload); 	// watch for all .js files
 }
 
 function fonts () {
