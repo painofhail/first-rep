@@ -15,7 +15,7 @@ function cleanDist () {
 
 function html () {
 	return src('src/html/**/*.html')
-		.pipe(htmlmin({	collapseWhitespace: true }))
+		.pipe(htmlmin())
 		.pipe(dest('.'))
 }
 
