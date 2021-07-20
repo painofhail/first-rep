@@ -1,28 +1,3 @@
 @import 'global/global.scss';
+@import 'helpers/helpers.scss';
 @import 'components/components.scss';
-
-body {
-	background-color: $background-color-light-theme;
-	color: $font-color-light-theme;
-	transition: 0.5s;
-
-	.container {
-		padding: 10px;
-		position: relative;
-		top: $progress-bar-height;
-		z-index: 1;
-	}
-
-	&.dark-theme {
-		background-color: $background-color-dark-theme;
-		color: $font-color-dark-theme;
-	}
-}
-
-.random-text {
-	padding-top: 20px;
-
-	&:first-child{
-		padding-top: 0;
-	}
-}

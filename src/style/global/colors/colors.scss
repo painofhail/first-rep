@@ -1,3 +1,4 @@
+// Main colors
 $main-color-dark: #222222;
 $main-color-light: #f4f4f4;
 
@@ -8,3 +9,12 @@ $background-color-dark-theme: $main-color-dark;
 // Dark theme colors
 $font-color-light-theme: $main-color-dark;
 $font-color-dark-theme: $main-color-light;
+
+// Switch theme colors
+$switch-theme-border-light-color: $main-color-dark;
+$switch-theme-border-dark-color: $main-color-light;
+
+// Progress bar colors
+$progress-bar-height: 5px;
+$progress-bar-main-color: orange;
+$progress-bar-current-color: orangered;

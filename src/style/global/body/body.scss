@@ -1,0 +1,10 @@
+body {
+	background-color: $background-color-light-theme;
+	color: $font-color-light-theme;
+	transition: 0.5s;
+
+	&.dark-theme {
+		background-color: $background-color-dark-theme;
+		color: $font-color-dark-theme;
+	}
+}

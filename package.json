@@ -2,7 +2,7 @@
   "name": "first-rep",
   "version": "1.0.0",
   "description": "[Link](https://painofhail.github.io/first-rep/) to the rep page.",
-  "main": "index.js",
+  "main": "",
   "scripts": {
     "build": "gulp build",
     "start": "gulp",
