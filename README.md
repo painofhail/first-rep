@@ -15,4 +15,3 @@ My plans for this rep:
 - [x] add .yml test action for GitHub
 - [x] apply BEM-metodology to project
 - [x] add custom-modal component
-- [ ] make any small project
